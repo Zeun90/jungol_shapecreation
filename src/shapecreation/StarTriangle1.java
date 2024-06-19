@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class StarTriangle1 {
-    final static String star = "*";
-    final static String space = " ";
+    static final String star = "*";
+    static final String space = " ";
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
