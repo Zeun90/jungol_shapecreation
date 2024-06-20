@@ -12,6 +12,7 @@ public class StarTriangle3 {
     final static String space = " ";
 
     public static void main(String[] args) throws IOException {
+        StarTriangle3 st3 = new StarTriangle3();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int size = Integer.parseInt(st.nextToken());
@@ -19,11 +20,11 @@ public class StarTriangle3 {
         if (size < 1 || 100 < size || size % 2 == 0) {
             System.out.println("INPUT ERROR!");
         } else {
-            star(size);
+            st3.star(size);
         }
     }
 
-    public static void star(int size) {
+    public void star(int size) {
         for (int i = 1; i <= size / 2 + 1; i++) {
             for (int j = 1; j < i; j++) {
                 System.out.print(space);

@@ -10,6 +10,7 @@ public class StarTriangle2 {
     final static String space = " ";
 
     public static void main(String[] args) throws IOException {
+        StarTriangle2 st2 = new StarTriangle2();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int size = Integer.parseInt(st.nextToken());
@@ -17,11 +18,11 @@ public class StarTriangle2 {
         if (size < 1 || 100 < size || size % 2 == 0) {
             System.out.println("INPUT ERROR!");
         } else {
-            star(size);
+            st2.star(size);
         }
     }
 
-    public static void star(int size) {
+    public void star(int size) {
         int spaceMaxSize = size / 2;
         int starMaxSize = size / 2 + 1;
 

@@ -10,6 +10,7 @@ public class StarTriangle1 {
     static final String space = " ";
 
     public static void main(String[] args) throws IOException {
+        StarTriangle1 st1 = new StarTriangle1();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int size = Integer.parseInt(st.nextToken());
@@ -20,31 +21,31 @@ public class StarTriangle1 {
         } else {
             switch (type) {
                 case 1:
-                    star1(size);
+                    st1.star1(size);
                     break;
                 case 2:
-                    star2(size);
+                    st1.star2(size);
                     break;
                 case 3:
-                    star3(size);
+                    st1.star3(size);
                     break;
             }
         }
     }
 
-    public static void star1(int size) {
+    public void star1(int size) {
         for (int i = 1; i <= size; i++) {
             System.out.println(star.repeat(i));
         }
     }
 
-    public static void star2(int size) {
+    public void star2(int size) {
         for (int i = size; i > 0; i--) {
             System.out.println(star.repeat(i));
         }
     }
 
-    public static void star3(int size) {
+    public void star3(int size) {
         for (int i = 1; i <= size; i++) {
             System.out.print(space.repeat(size - i));
             System.out.println(star.repeat(i * 2 - 1));
